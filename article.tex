@@ -55,18 +55,47 @@
 \renewcommand{\abstracttextfont}{\normalfont\small\itshape} 
                                         % set abstract to small italics
 
+%%%%%%%%%% heading and footer formating
+\fancypagestyle{fancydoubleline}{
+    \fancyhf{} % remove everything
+    \renewcommand{\headrulewidth}{1pt}
+    \renewcommand{\footrulewidth}{1pt}
+    \lhead{\rightmark}
+    \rhead{}
+    \chead{}
+    \rfoot{Página \thepage}
+    \lfoot{}
+    \cfoot{}
+}
+\fancypagestyle{fancyupperline}{
+    \fancyhf{} % remove everything
+    \renewcommand{\headrulewidth}{1pt}
+    \renewcommand{\footrulewidth}{0pt}
+    \lhead{\rightmark}
+    \rhead{}
+    \chead{}
+    \rfoot{Página \thepage}
+    \lfoot{}
+    \cfoot{}
+}
+\fancypagestyle{fancynoline}{
+    \fancyhf{} % remove everything
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+    \lhead{\rightmark}
+    \rhead{}
+    \chead{}
+    \rfoot{Página \thepage}
+    \lfoot{}
+    \cfoot{}
+}
+
 %%%%%%%%%%%%%%%%%
 % Configuration %
 %%%%%%%%%%%%%%%%%
 
 %%%%%%%%%% headers and footers
-\pagestyle{fancy}
-%\lhead{}
-\rhead{}
-\chead{}
-\rfoot{Página \thepage}
-\lfoot{}
-\cfoot{}
+\pagestyle{fancyupperline}
 
 %%%%%%%%%% title, date and author
 \title{Title Title Title}
