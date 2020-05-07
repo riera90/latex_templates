@@ -1,4 +1,4 @@
-\documentclass[twoside,twocolumn]{article}
+\documentclass[a4paper,onecolumn]{article}
 
 %%%%%%%%%% language
 \usepackage[spanish, activeacute]{babel}
@@ -49,10 +49,9 @@
 \setlist[itemize]{noitemsep}            % Make itemize lists more compact
 
 %%%%%%%%%% title and abstract formating
-\pretitle{\begin{center}\Huge\bfseries} % Article title formatting
-\posttitle{\end{center}}                % Article title closing formatting
-\setlength{\droptitle}{-4\baselineskip} % Move the title up
-\renewcommand{\abstracttextfont}{\normalfont\small\itshape} 
+
+%\setlength{\droptitle}{-4\baselineskip} % Move the title up
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} 
                                         % set abstract to small italics
 
 %%%%%%%%%% heading and footer formating
@@ -71,8 +70,8 @@
     \fancyhf{} % remove everything
     \renewcommand{\headrulewidth}{1pt}
     \renewcommand{\footrulewidth}{0pt}
-    \lhead{\rightmark}
-    \rhead{}
+    \lhead{\leftmark}
+    \rhead{\thetitle}
     \chead{}
     \rfoot{Página \thepage}
     \lfoot{}
@@ -113,11 +112,11 @@
 }
 
 %%%%%%%%%% abstract
-\renewcommand{\maketitlehookd}{
-    \begin{abstract}
-        \noindent \blindtext
-    \end{abstract}
-}
+%\renewcommand{\maketitlehookd}{
+%    \begin{abstract}
+%        \noindent \blindtext
+%    \end{abstract}
+%}
 
 %%%%%%%%%%%%%%%%
 % THE DOCUMENT %
@@ -125,6 +124,9 @@
 
 \begin{document}
 \maketitle
+\pagebreak
+\tableofcontents
+\pagebreak
 \section{hello2}
     \blindtext
     \paragraph{}\blindtext
